@@ -9,23 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var static_datasource_1 = require("./static.datasource");
-var ProductRepository = (function () {
-    function ProductRepository(datasource) {
-        var _this = this;
-        this.datasource = datasource;
-        this.products = [];
-        this.categories = [];
-        datasource.getProducts().subscribe(function (data) {
-            _this.products = data;
-            _this.categories = data.map(function (p) { return p.category; })
-                .filter(function (c, index, array) { return array.indexOf(c) == index; }).sort();
-        });
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var model_module_1 = require("../model/model.module");
+var store_component_1 = require("./store.component");
+var StoreModule = (function () {
+    function StoreModule() {
     }
-    ProductRepository = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [static_datasource_1.StaticDataSource])
-    ], ProductRepository);
-    return ProductRepository;
+    StoreModule = __decorate([
+        core_1.NgModule({
+            imports: [model_module_1.ModelModule, platform_browser_1.BrowserModule, forms_1.FormsModule],
+            declarations: [store_component_1.StoreComponent],
+            exports: [store_component_1.StoreComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], StoreModule);
+    return StoreModule;
 }());
-exports.ProductRepository = ProductRepository;
+exports.StoreModule = StoreModule;
