@@ -35,7 +35,7 @@ var Cart = (function () {
     };
     Cart.prototype.removeLine = function (id) {
         var index = this.lines.findIndex(function (line) { return line.product.id == id; });
-        this.lines.splice(index);
+        this.lines.splice(index, 1);
         this.recalculate();
     };
     Cart.prototype.clear = function () {

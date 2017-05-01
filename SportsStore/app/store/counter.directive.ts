@@ -15,7 +15,6 @@ export class CounterDirective {
     counter: number;
 
     ngOnChanges(changes: SimpleChanges) {
-        console.log(this.counter);
         this.container.clear();
         for (let i = 0; i < this.counter; i++) {
             this.container.createEmbeddedView(this.template, new CounterDirectiveContext(i + 1));

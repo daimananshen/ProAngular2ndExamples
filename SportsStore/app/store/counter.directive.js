@@ -15,7 +15,6 @@ var CounterDirective = (function () {
         this.template = template;
     }
     CounterDirective.prototype.ngOnChanges = function (changes) {
-        console.log(this.counter);
         this.container.clear();
         for (var i = 0; i < this.counter; i++) {
             this.container.createEmbeddedView(this.template, new CounterDirectiveContext(i + 1));
