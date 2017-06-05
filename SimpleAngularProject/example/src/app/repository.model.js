@@ -1,4 +1,5 @@
 "use strict";
+var product_model_1 = require("./product.model");
 var datasource_model_1 = require("./datasource.model");
 var Model = (function () {
     function Model() {
@@ -33,6 +34,10 @@ var Model = (function () {
         if (index > -1) {
             this.products.splice(index, 1);
         }
+    };
+    Model.prototype.swapProduct = function () {
+        var p = this.products.shift();
+        this.products.push(new product_model_1.Product(p.id, p.name, p.category, p.price));
     };
     Model.prototype.generateID = function () {
         var candidate = 100;
