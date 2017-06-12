@@ -56,7 +56,7 @@ export class AppUpdateDataComponent {
     }
 
     addProduct(p: Product) {
-        console.log("New Product: " + this.jsonProduct);
+        this.model.saveProduct(p);
     }
 
     getFormValidationMessages(form: NgForm): string[] {

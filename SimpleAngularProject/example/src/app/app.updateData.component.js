@@ -52,7 +52,7 @@ var AppUpdateDataComponent = (function () {
         configurable: true
     });
     AppUpdateDataComponent.prototype.addProduct = function (p) {
-        console.log("New Product: " + this.jsonProduct);
+        this.model.saveProduct(p);
     };
     AppUpdateDataComponent.prototype.getFormValidationMessages = function (form) {
         var _this = this;
