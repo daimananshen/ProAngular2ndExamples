@@ -10,8 +10,13 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var attr_directive_1 = require("./attr.directive");
 var twoway_directive_1 = require("./twoway.directive");
+var structure_directive_1 = require("./structure.directive");
+var iterator_directive_1 = require("./iterator.directive");
+var cellColor_directive_1 = require("./cellColor.directive");
+var cellColorSwitcher_directive_1 = require("./cellColorSwitcher.directive");
 var app_component_1 = require("./app.component");
 var app_updateData_component_1 = require("./app.updateData.component");
+var app_structure_directive_component_1 = require("./app.structure.directive.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,7 +25,8 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, app_updateData_component_1.AppUpdateDataComponent, attr_directive_1.PaAttrDirective, twoway_directive_1.PaModel],
+        declarations: [app_component_1.AppComponent, app_updateData_component_1.AppUpdateDataComponent, attr_directive_1.PaAttrDirective,
+            twoway_directive_1.PaModel, app_structure_directive_component_1.AppStructureDirectiveComponent, structure_directive_1.PaStructureDirective, iterator_directive_1.PaIteratorDirective, cellColor_directive_1.PaCellColor, cellColorSwitcher_directive_1.PaCellColorSwitcher],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
