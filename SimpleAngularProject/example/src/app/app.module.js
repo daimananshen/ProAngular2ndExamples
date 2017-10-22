@@ -14,6 +14,10 @@ var structure_directive_1 = require("./structure.directive");
 var iterator_directive_1 = require("./iterator.directive");
 var cellColor_directive_1 = require("./cellColor.directive");
 var cellColorSwitcher_directive_1 = require("./cellColorSwitcher.directive");
+var app_useComponent_1 = require("./app.useComponent");
+var app_useComponent_productTable_component_1 = require("./app.useComponent.productTable.component");
+var app_useComponent_productForm_component_1 = require("./app.useComponent.productForm.component");
+var toggleContent_component_1 = require("./toggleContent.component");
 var app_component_1 = require("./app.component");
 var app_updateData_component_1 = require("./app.updateData.component");
 var app_structure_directive_component_1 = require("./app.structure.directive.component");
@@ -26,7 +30,9 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
         declarations: [app_component_1.AppComponent, app_updateData_component_1.AppUpdateDataComponent, attr_directive_1.PaAttrDirective,
-            twoway_directive_1.PaModel, app_structure_directive_component_1.AppStructureDirectiveComponent, structure_directive_1.PaStructureDirective, iterator_directive_1.PaIteratorDirective, cellColor_directive_1.PaCellColor, cellColorSwitcher_directive_1.PaCellColorSwitcher],
+            twoway_directive_1.PaModel, app_structure_directive_component_1.AppStructureDirectiveComponent, structure_directive_1.PaStructureDirective,
+            iterator_directive_1.PaIteratorDirective, cellColor_directive_1.PaCellColor, cellColorSwitcher_directive_1.PaCellColorSwitcher,
+            app_useComponent_1.AppUseComponent, app_useComponent_productForm_component_1.ProductFormComponent, app_useComponent_productTable_component_1.ProductTableComponent, toggleContent_component_1.ToggleContentComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

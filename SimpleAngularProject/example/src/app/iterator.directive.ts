@@ -36,7 +36,7 @@ export class PaIteratorDirective {
         if (changes != null) {
             console.log("ngDoCheck called, changes detected");
             changes.forEachAddedItem(addition => {
-                let context = new PaIteratorContext(addition.item, addition.currentIndex, changes.length);
+                let context = new PaIteratorContext(addition.item, addition.currentIndex, 10);
                 context.view = this.container.createEmbeddedView(this.template, context);
                 this.views.set(addition.trackById, context);
             });

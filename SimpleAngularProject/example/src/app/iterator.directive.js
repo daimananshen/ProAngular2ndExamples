@@ -30,7 +30,7 @@ var PaIteratorDirective = (function () {
         if (changes != null) {
             console.log("ngDoCheck called, changes detected");
             changes.forEachAddedItem(function (addition) {
-                var context = new PaIteratorContext(addition.item, addition.currentIndex, changes.length);
+                var context = new PaIteratorContext(addition.item, addition.currentIndex, 10);
                 context.view = _this.container.createEmbeddedView(_this.template, context);
                 _this.views.set(addition.trackById, context);
             });
